@@ -1,0 +1,86 @@
+//Problema 1// 
+
+int a;
+    Console.WriteLine("Introduceti numarul: ");
+    a = int.Parse(Console.ReadLine());
+    if (a % 7 == 0 && a % 11 == 0)
+    {
+        Console.WriteLine("Numarul " + a + " este divizibil cu 7 si 11");
+    }
+    else
+    {
+        Console.WriteLine("Numarul " + a + " nu este divizibil cu 7 si 11");
+    }
+    
+    
+    //Problema 2// 
+
+int an;
+    Console.WriteLine("Introduceti anul: ");
+    an = int.Parse(Console.ReadLine());
+    if ((an % 4 == 0 && an % 100 != 0)||(an%400==0))
+    {
+        Console.WriteLine("Anul " + an + " este an bisect");
+    }
+    else
+    {
+        Console.WriteLine("Anul " + an + " nu este an bisect");
+    }
+
+
+
+//Problema 3// 
+
+int y = 0;
+int nr = 2;
+while (y < 47 )
+{
+    int div = 0;
+    for (int i = 1; i <= nr; i++)
+        if (nr % i == 0)
+            div++;
+    if (div == 2)
+        y++;
+    nr++;
+}
+Console.WriteLine(nr - 1);
+
+
+//Problema 4//
+
+int i=3;
+int a = 1;
+int b = 2;
+int c;
+int sum=2;
+while (i < 9)
+{
+    c = a + b;
+    if (c % 2 == 0)
+    {
+        sum = sum + c;
+    }
+    a = b;
+    b = c;
+
+    i++; 
+}
+Console.WriteLine("Suma este: " + sum);
+
+
+
+//Problema 5//
+
+
+Console.WriteLine("Introduceti numarul: ");
+String n=Console.ReadLine();
+int num = Int32.Parse(n);
+int sum=0;
+while (num != 0)
+{
+    sum = sum + num % 10;
+    num /= 10;
+
+    
+}
+Console.WriteLine("Suma cifrelor este: " + sum);
